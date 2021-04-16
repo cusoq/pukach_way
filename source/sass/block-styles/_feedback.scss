@@ -6,6 +6,12 @@
   background-color: yellow;
 }
 
+.feedback__caption {
+  margin: 0;
+  font-size: $font-size-largest;
+  font-weight: $font-weight-semi-bold;
+}
+
 .feedback__form-container {
   text-align: center;
   width: 656px;
@@ -15,4 +21,12 @@
 
 .feedback__inner-wrapper {
   display: flex;
+}
+
+.feedback__field::placeholder {
+  font-size: $font-size-small;
+}
+
+.feedback__button {
+  @include primary-link-mixin($font-size-tiny, 50px, 178px);
 }

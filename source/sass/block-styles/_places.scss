@@ -1,3 +1,16 @@
+.places__caption {
+  margin: 0;
+  font-size: $font-size-enormous;
+  font-weight: $font-weight-semi-bold;
+  color: $deep-darken;
+}
+
+.places__description {
+  font-weight: $font-weight-regular;
+  color: $darken;
+  opacity: 0.7;
+}
+
 .places__list {
   display: flex;
   flex-wrap: wrap;
@@ -17,17 +30,37 @@
   position: relative;
   display: block;
   width: 350px;
-  background-color: blueviolet;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: none;
+    top: 0;
+    width: 350px;
+    height: 430px;
+    background-image: url("../img/hover-shadow.png");
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+}
+
+.places__country-card:hover,
+.places__country-card:focus {
+  &::after {
+    display: block;
+  }
 }
 
 .places__country-name {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: calc(50% - 107px);
   width: 215px;
   margin: 0;
-  line-height: 2.8;
+  line-height: 60px;
   text-align: center;
+  font-size: $font-size-large;
+  font-weight: $font-weight-semi-bold;
   background-color: $secondary-color;
   color: $darken;
   z-index: 2;

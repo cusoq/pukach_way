@@ -1,35 +1,39 @@
 // Colors
-$pimary-color: #000;
-$secondary-color: #fff;
+$pimary-color: #000000;
+$secondary-color: #ffffff;
 $darken: #2c2e3f;
 $deep-darken: #141517;
 $accent-hover: #f17d4b;
 $accent-basic: #fe7865;
-;
 
-
-
-
-
-$basic-green: tan;
-$basic-gray: #f2f2f2;
 
 // Fonts
-$font-family: "Montserrat", sans-serif;
-
+$font-size-micro: 10px;
 $font-size-tiny: 12px;
 $font-size-small: 14px;
 $font-size-base: 16px;
 $font-size-little-big: 18px;
 $font-size-big: 20px;
+$font-size-biggest: 22px;
 $font-size-large: 24px;
-$font-size-huge: 36px;
-$font-size-enormous: 60px;
+$font-size-largest: 25px;
+$font-size-giant: 28px;
+$font-size-huge: 30px;
+$font-size-enormous: 55px;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
 
 $line-height-big: 40px;
 $line-height-large: 50px;
 
 // Breakpoints
+$breakpoint-tablet: 1023px;
+$breakpoint-mobile: 767px;
+
+// Viewports
+$mobile-viewport: 280px;
+$tablet-viewport: 768px;
+$desktop-viewport: 1440px;

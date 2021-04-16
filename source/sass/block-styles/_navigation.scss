@@ -1,5 +1,13 @@
 .navigation__list {
   display: flex;
   justify-content: space-between;
-  background-color: lime;
+  color: $deep-darken;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+
+  &:hover,
+  &:focus {
+    color: $accent-hover;
+    transition: 0.4s;
+  }
 }

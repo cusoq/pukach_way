@@ -2,4 +2,13 @@
   width: 1200px;
   margin: 0 auto;
   outline: 2px dashed red;
+
+  @media (max-width: $breakpoint-tablet) {
+    background-color: plum;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background-color: aquamarine;
+    min-width: $mobile-viewport;
+  }
 }

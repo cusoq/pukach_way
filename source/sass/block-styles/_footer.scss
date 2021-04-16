@@ -8,10 +8,49 @@
   width: 33%;
 }
 
+.footer__caption {
+  margin: 0;
+  font-size: $font-size-little-big;
+  font-weight: $font-weight-semi-bold;
+}
+
+.footer__next-trips-list {
+  font-size: $font-size-small;
+  opacity: 0.5;
+}
+
 .footer__contacts {
   width: 33%;
 }
 
+.footer__contacts-email {
+  color: $accent-basic;
+  font-size: $font-size-small;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $accent-hover;
+    transition: 0.4s;
+  }
+}
+
+.footer__contacts-tel {
+  color: $accent-basic;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $accent-hover;
+    transition: 0.4s;
+  }
+}
+
 .footer__corporative-offers {
   width: 33%;
+}
+
+.footer__corporative-offers-description {
+  font-size: $font-size-small;
+  opacity: 0.5;
 }

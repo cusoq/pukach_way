@@ -3,10 +3,23 @@
   align-items: center;
   min-height: 100px;
   background-color: $secondary-color;
-  // font-weight: 700;
   color: $pimary-color;
   outline: 2px dotted aqua;
 }
+
 .header__logo-pic {
+  height: auto;
   margin: 0 auto 0 0;
+}
+
+.header__contacts {
+  color: $deep-darken;
+  font-size: $font-size-little-big;
+  font-weight: $font-weight-medium;
+
+  &:hover,
+  &:focus {
+    color: $accent-hover;
+    transition: 0.4s;
+  }
 }

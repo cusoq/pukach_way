@@ -1,7 +1,16 @@
 .prices {
   display: flex;
   justify-content: space-between;
-  background-color: coral;
+  background-color: paleturquoise;
+}
+
+.prices__tariff {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices__tariff--complex {
+  color: $accent-basic;
 }
 
 .prices__offer {
@@ -12,15 +21,48 @@
   outline: 2px dashed aquamarine;
 }
 
-.prices__tariff {
-  display: flex;
-  justify-content: space-between;
+.prices__offer--complex {
+  border: 3px solid $accent-basic;
+  border-radius: 6px;
+}
+
+.prices__offer--econom {
+  border: 3px solid $darken;
+  border-radius: 6px;
+}
+
+.prices__tariff-name {
+  font-size: $font-size-giant;
+  font-weight: $font-weight-semi-bold;
+}
+
+.prices__tariff-price {
+  font-size: $font-size-largest;
+  font-weight: $font-weight-bold;
 }
 
 .prices__call-us-text {
+  font-size: $font-size-biggest;
+  font-weight: $font-weight-medium;
   text-align: center;
 }
 
 .prices__contact {
+  font-size: $font-size-big;
   text-align: center;
+}
+
+.prices__buy-link {
+  @include primary-link-mixin($font-size-tiny, 75px, 310px);
+  align-self: center;
+}
+
+.prices__capture {
+  margin: 0;
+  font-size: $font-size-enormous;
+  font-weight: $font-weight-semi-bold;
+}
+
+.prices__description {
+  opacity: 0.7;
 }
