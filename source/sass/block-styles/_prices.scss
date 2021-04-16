@@ -1,0 +1,26 @@
+.prices {
+  display: flex;
+  justify-content: space-between;
+  background-color: coral;
+}
+
+.prices__offer {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  min-height: 672px;
+  outline: 2px dashed aquamarine;
+}
+
+.prices__tariff {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices__call-us-text {
+  text-align: center;
+}
+
+.prices__contact {
+  text-align: center;
+}

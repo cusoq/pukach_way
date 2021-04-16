@@ -1,4 +1,17 @@
 .footer {
-  // background-color: $basic-gray;
+  display: flex;
+  justify-content: space-between;
+  background-color: $secondary-color;
 }
 
+.footer__next-trips {
+  width: 33%;
+}
+
+.footer__contacts {
+  width: 33%;
+}
+
+.footer__corporative-offers {
+  width: 33%;
+}

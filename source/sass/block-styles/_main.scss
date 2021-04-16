@@ -1,14 +1,20 @@
-.main__main-information-container {
+.main {
   color: $secondary-color;
   background-color: $basic-green;
+  // color: blue;
+
+  display: block;
+  min-height: 350px;
+  font-size: $font-size-large;
+
 }
 
-.main__main-title {
-  font-size: $font-size-huge;
-  font-weight: $font-weight-regular;
-}
+// .main__main-title {
+//   font-size: $font-size-huge;
+//   font-weight: $font-weight-regular;
+// }
 
-.main__slogan {
-  font-size: $font-size-small;
-  text-transform: uppercase;
-}
+// .main__slogan {
+//   font-size: $font-size-small;
+//   text-transform: uppercase;
+// }

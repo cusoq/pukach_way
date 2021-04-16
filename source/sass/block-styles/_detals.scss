@@ -1,0 +1,33 @@
+.detals {
+  background-color: aquamarine;
+}
+
+.detals__tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  background-color: azure;
+}
+
+.detals__tab-button {
+  color: $darken;
+  line-height: 2.8;
+  opacity: 0.3;
+}
+
+.detals__tab-button--active {
+  color: $accent-basic;
+  opacity: 1;
+}
+
+.detals__tab-blocks {
+  position: relative;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.detals__tab-block {
+  width: 900px;
+  min-height: 596px;
+  background-color: purple;
+}

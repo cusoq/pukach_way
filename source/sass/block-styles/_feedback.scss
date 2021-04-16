@@ -1,0 +1,18 @@
+.feedback {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  min-height: 455px;
+  background-color: yellow;
+}
+
+.feedback__form-container {
+  text-align: center;
+  width: 656px;
+  min-height: 315px;
+  background-color: plum;
+}
+
+.feedback__inner-wrapper {
+  display: flex;
+}
