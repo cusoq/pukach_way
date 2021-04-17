@@ -44,15 +44,36 @@
   font-weight: $font-weight-semi-bold;
   font-size: $font-size-enormous;
   margin: 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+    font-size: $font-size-huge;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-large;
+  }
 }
 
 .detals__country-text {
   font-weight: $font-weight-regular;
   opacity: 0.7;
+
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+  }
 }
 
 .detals__country-buy-link {
   @include primary-link-mixin($font-size-tiny, 75px, 250px);
+
+  @media (max-width: $breakpoint-tablet) {
+    @include primary-link-mixin($font-size-micro, 50px, 250px);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    @include primary-link-mixin($font-size-micro, 50px, 288px);
+  }
 }
 
 .detals__country-reviews {
@@ -63,12 +84,21 @@
   font-weight: $font-weight-medium;
   font-size: $font-size-huge;
   margin: 0;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-big;
+    text-align: center;
+  }
 }
 
 .detals__country-reviews-text {
   font-size: $font-size-small;
   font-weight: $font-weight-regular;
   opacity: 0.7;
+
+  @media (max-width: $breakpoint-mobile) {
+    text-align: center;
+  }
 }
 
 .detals__author-name {

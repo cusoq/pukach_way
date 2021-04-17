@@ -5,10 +5,12 @@
 
   @media (max-width: $breakpoint-tablet) {
     background-color: plum;
+    max-width: $tablet-viewport;
   }
 
   @media (max-width: $breakpoint-mobile) {
     background-color: aquamarine;
-    min-width: $mobile-viewport;
+    max-width: $mobile-viewport;
+    min-width: $min-mobile-viewport;
   }
 }

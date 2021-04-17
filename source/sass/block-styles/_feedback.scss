@@ -29,4 +29,12 @@
 
 .feedback__button {
   @include primary-link-mixin($font-size-tiny, 50px, 178px);
+
+  @media (max-width: $breakpoint-tablet) {
+    @include primary-link-mixin($font-size-micro, 50px, 250px);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    @include primary-link-mixin($font-size-micro, 50px, 288px);
+  }
 }

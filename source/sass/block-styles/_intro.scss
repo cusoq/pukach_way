@@ -5,18 +5,39 @@
   min-height: 860px;
   margin: 0 0 0 auto;
   background-color: $darken;
+
+  @media (max-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .intro__caption {
   margin: 0;
   font-size: $font-size-enormous;
   font-weight: $font-weight-semi-bold;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $font-size-huge;
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-large;
+  }
 }
 
 .intro__lead {
   width: 360px;
   font-size: $font-size-base;
   font-weight: $font-weight-regular;
+
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+  }
 }
 
 .intro__tour-link {
@@ -26,4 +47,16 @@
   background-image: url("../img/arrow-right.svg");
   background-repeat: no-repeat;
   background-position: 90% 50%;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include primary-link-mixin($font-size-micro, 50px, 250px);
+    padding: 0 0 0 40px;
+    text-align: left;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    @include primary-link-mixin($font-size-micro, 50px, 288px);
+    padding: 0 0 0 40px;
+    text-align: left;
+  }
 }

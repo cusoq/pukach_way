@@ -3,12 +3,25 @@
   font-size: $font-size-enormous;
   font-weight: $font-weight-semi-bold;
   color: $deep-darken;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $font-size-huge;
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-large;
+  }
 }
 
 .places__description {
   font-weight: $font-weight-regular;
   color: $darken;
   opacity: 0.7;
+
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+  }
 }
 
 .places__list {

@@ -5,6 +5,12 @@
   font-size: $font-size-small;
   font-weight: $font-weight-medium;
 
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $font-size-big;
+    font-weight: $font-weight-semi-bold;
+    color: $light-darken;
+  }
+
   &:hover,
   &:focus {
     color: $accent-hover;

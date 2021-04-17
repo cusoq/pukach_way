@@ -5,7 +5,8 @@ $darken: #2c2e3f;
 $deep-darken: #141517;
 $accent-hover: #f17d4b;
 $accent-basic: #fe7865;
-
+$ultra-light: #e5e5e5;
+$light-darken: #48494d;
 
 // Fonts
 $font-size-micro: 10px;
@@ -34,6 +35,7 @@ $breakpoint-tablet: 1023px;
 $breakpoint-mobile: 767px;
 
 // Viewports
-$mobile-viewport: 280px;
+$min-mobile-viewport: 280px;
+$mobile-viewport: 320px;
 $tablet-viewport: 768px;
 $desktop-viewport: 1440px;

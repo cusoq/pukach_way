@@ -34,6 +34,10 @@
 .prices__tariff-name {
   font-size: $font-size-giant;
   font-weight: $font-weight-semi-bold;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $font-size-large;
+  }
 }
 
 .prices__tariff-price {
@@ -45,24 +49,56 @@
   font-size: $font-size-biggest;
   font-weight: $font-weight-medium;
   text-align: center;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $font-size-little-big;
+  }
 }
 
 .prices__contact {
   font-size: $font-size-big;
   text-align: center;
+
+  @media (max-width: $breakpoint-tablet) {
+    color: $accent-basic;
+    font-size: $font-size-little-big;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-hover;
+    transition: 0.4s;
+  }
 }
 
 .prices__buy-link {
   @include primary-link-mixin($font-size-tiny, 75px, 310px);
   align-self: center;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include primary-link-mixin($font-size-micro, 50px, 288px);
+  }
 }
 
 .prices__capture {
   margin: 0;
   font-size: $font-size-enormous;
   font-weight: $font-weight-semi-bold;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $font-size-huge;
+    text-align: center;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $font-size-large;
+  }
 }
 
 .prices__description {
   opacity: 0.7;
+
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+  }
 }

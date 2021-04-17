@@ -10,12 +10,20 @@
 .header__logo-pic {
   height: auto;
   margin: 0 auto 0 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 44px;
+  }
 }
 
 .header__contacts {
   color: $deep-darken;
   font-size: $font-size-little-big;
   font-weight: $font-weight-medium;
+
+  @media (max-width: $breakpoint-tablet) {
+    visibility: hidden;
+  }
 
   &:hover,
   &:focus {
