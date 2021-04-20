@@ -1,12 +1,27 @@
 .prices {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  background-color: paleturquoise;
+  padding: 235px 0 140px 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 60px 0 120px 0;
+    justify-content: space-around;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 50px 0 0 0;
+  }
 }
 
 .prices__tariff {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .prices__tariff--complex {
@@ -14,26 +29,68 @@
 }
 
 .prices__offer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 370px;
   min-height: 672px;
-  outline: 2px dashed aquamarine;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 288px;
+    min-height: 635px;
+  }
 }
 
 .prices__offer--complex {
+  padding: 25px 30px 30px 30px;
   border: 3px solid $accent-basic;
   border-radius: 6px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 15px 0 0 0;
+    margin: 0 0 0 40px;
+    line-height: 38px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0 auto 32px auto;
+  }
 }
 
 .prices__offer--econom {
-  border: 3px solid $darken;
+  padding: 25px 30px 30px 30px;
+  border: 3px solid $ultra-light;
   border-radius: 6px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 15px 0 0 0;
+    margin: 0 40px 0 0;
+    line-height: 38px;
+    border-radius: 6px 6px 0 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0 auto 32px auto;
+  }
+}
+
+.prices__offer--reach-agreement {
+  padding: 115px 0 0 80px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 100%;
+    min-height: auto;
+    padding: 50px 20px 40px 20px;
+    text-align: center;
+    order: -1;
+  }
 }
 
 .prices__tariff-name {
   font-size: $font-size-giant;
   font-weight: $font-weight-semi-bold;
+  letter-spacing: -1.27px;
 
   @media (max-width: $breakpoint-tablet) {
     font-size: $font-size-large;
@@ -45,6 +102,91 @@
   font-weight: $font-weight-bold;
 }
 
+.prices__offer-description {
+  margin: 30px 0 55px 0;
+  padding: 0 20px 0 0;
+  line-height: 24px;
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: 0 10px 25px 10px;
+    text-align: center;
+  }
+}
+
+.prices__offer-list {
+  position: relative;
+  padding: 0 0 0 25px;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 0 0 0 45px;
+  }
+}
+
+.prices__offer-list--complex::after {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $accent-basic;
+  opacity: 0.5;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 248px;
+    top: -15px;
+    left: 15px;
+  }
+}
+
+.prices__offer-list--econom::after {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $darken;
+  opacity: 0.5;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 248px;
+    top: -15px;
+    left: 15px;
+  }
+}
+
+.prices__offer-item {
+  position: relative;
+  line-height: 32px;
+  margin: 0 0 15px 0;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+  }
+}
+
+.prices__offer-item--complex {
+  &::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23141517'/%3e%3c/svg%3e ");
+  }
+}
+
+.prices__offer-item--econom {
+  &::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23FE7865'/%3e%3c/svg%3e ");
+  }
+}
+
 .prices__call-us-text {
   font-size: $font-size-biggest;
   font-weight: $font-weight-medium;
@@ -53,11 +195,31 @@
   @media (max-width: $breakpoint-tablet) {
     font-size: $font-size-little-big;
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0 0 20px 0;
+  }
 }
 
 .prices__contact {
+  position: relative;
   font-size: $font-size-big;
   text-align: center;
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='24' viewBox='0 0 17 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.39635 6.62432C1.31179 5.42623 1.57753 4.24606 2.28114 3.29684C2.89115 2.43632 3.68536 1.96636 4.64264 1.69172C5.44893 1.4525 5.9774 1.74561 6.20992 2.64204C6.54211 3.98224 7.01622 5.3225 7.18836 6.73361C7.24271 7.35485 6.84108 8.23322 6.40623 8.6856C5.31608 9.75888 5.54257 10.5399 6.37 12.1643C6.62669 12.6881 7.03436 13.5934 7.82858 14.7919C8.65601 15.9992 9.09389 16.6472 10.1569 16.0975C11.3376 15.5035 12.1983 15.8855 13.0891 16.8444C13.6931 17.5369 14.3574 18.1318 14.9614 18.8243C15.8341 19.8542 15.7949 20.5641 15.1124 21.2915C13.8833 22.6309 11.854 23.0736 10.3441 22.1766C9.51064 21.6881 8.68018 21.0487 8.01884 20.303C5.10471 16.9825 3.00291 13.1212 1.73759 8.76321C1.53526 8.02654 1.44165 7.28104 1.39635 6.62432Z' stroke='%23FE7865' stroke-width='2' stroke-miterlimit='10'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
 
   @media (max-width: $breakpoint-tablet) {
     color: $accent-basic;
@@ -74,6 +236,7 @@
 .prices__buy-link {
   @include primary-link-mixin($font-size-tiny, 75px, 310px);
   align-self: center;
+  margin: auto 0 0 0;
 
   @media (max-width: $breakpoint-tablet) {
     @include primary-link-mixin($font-size-micro, 50px, 288px);
@@ -81,13 +244,33 @@
 }
 
 .prices__capture {
-  margin: 0;
+  position: relative;
+  margin: 0 0 30px 0;
   font-size: $font-size-enormous;
   font-weight: $font-weight-semi-bold;
+  line-height: 90px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 105px;
+    left: 0;
+    display: block;
+    width: 175px;
+    height: 2px;
+    background-color: $accent-basic;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+      margin: 0 0 10px 0;
+    }
+  }
 
   @media (max-width: $breakpoint-tablet) {
     font-size: $font-size-huge;
+    line-height: 45px;
     text-align: center;
+    margin: 0;
   }
 
   @media (max-width: $breakpoint-mobile) {
@@ -96,9 +279,11 @@
 }
 
 .prices__description {
+  line-height: 27px;
   opacity: 0.7;
 
   @media (max-width: $breakpoint-tablet) {
     text-align: center;
+    padding: 0 0 10px 0;
   }
 }

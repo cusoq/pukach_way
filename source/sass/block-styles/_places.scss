@@ -1,16 +1,56 @@
+.places {
+  padding: 200px 0 0 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 80px 0 0 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 110px 0 0 0;
+  }
+}
+
 .places__caption {
+  position: relative;
   margin: 0;
   font-size: $font-size-enormous;
   font-weight: $font-weight-semi-bold;
   color: $deep-darken;
+  line-height: 80px;
+  letter-spacing: -1.25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 190px;
+    left: 0;
+    display: block;
+    width: 225px;
+    height: 4px;
+    background-color: $accent-basic;
+  }
 
   @media (max-width: $breakpoint-tablet) {
     font-size: $font-size-huge;
     text-align: center;
+    line-height: 45px;
+    letter-spacing: inherit;
+
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (max-width: $breakpoint-mobile) {
     font-size: $font-size-large;
+    line-height: 36px;
+  }
+}
+
+.places__caption br {
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
   }
 }
 
@@ -18,9 +58,17 @@
   font-weight: $font-weight-regular;
   color: $darken;
   opacity: 0.7;
+  line-height: 28px;
+  letter-spacing: -0.47px;
+  margin: 65px 0 55px 0;
 
   @media (max-width: $breakpoint-tablet) {
     text-align: center;
+    margin: 20px 0 40px 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 20px 0 20px 0;
   }
 }
 
@@ -28,21 +76,50 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  outline: 3px dotted aqua;
   margin: 0 -3%;
+
+  @media (max-width: $breakpoint-tablet) {
+    justify-content: center;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0;
+  }
 }
 
 .places__list li {
   display: flex;
   justify-content: center;
-  outline: 3px dotted magenta;
   width: 33.3%;
+  margin: 0 0 100px 0;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 39%;
+    margin: 0 0 15px 0;
+
+    &:last-child {
+      margin: 15px 0 15px 0;
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin: 0 0 30px 0;
+
+    &:last-child {
+      margin: 0 0 15px 0;
+    }
+  }
 }
 
 .places__country-card {
   position: relative;
   display: block;
   width: 350px;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 288px;
+  }
 
   &::after {
     position: absolute;
@@ -51,9 +128,38 @@
     top: 0;
     width: 350px;
     height: 430px;
-    background-image: url("../img/hover-shadow.png");
-    background-repeat: no-repeat;
-    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 288px;
+      height: 355px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 288px;
+      height: 425px;
+    }
+  }
+}
+
+.places__look-more {
+  position: absolute;
+  top: 35%;
+  left: calc(50% - 144px);
+  display: none;
+  width: 288px;
+  line-height: 77px;
+  text-align: center;
+  color: $ultra-light;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
+  border: 2px solid $ultra-light;
+  z-index: 3;
+
+  @media (max-width: $breakpoint-tablet) {
+    width: 240px;
+    line-height: 70px;
+    left: calc(50% - 120px);
   }
 }
 
@@ -61,7 +167,14 @@
 .places__country-card:focus {
   &::after {
     display: block;
+    transition: 0.1s;
   }
+}
+
+.places__country-card:hover .places__look-more,
+.places__country-card:focus .places__look-more {
+  display: block;
+  transition: 0.1s;
 }
 
 .places__country-name {
@@ -70,7 +183,8 @@
   left: calc(50% - 107px);
   width: 215px;
   margin: 0;
-  line-height: 60px;
+  line-height: 65px;
+  letter-spacing: -0.41px;
   text-align: center;
   font-size: $font-size-large;
   font-weight: $font-weight-semi-bold;

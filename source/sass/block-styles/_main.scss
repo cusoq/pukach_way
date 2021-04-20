@@ -1,3 +1,10 @@
 .main {
   color: $darken;
+  background-image: url("../img/map-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 72%;
+
+  @media (max-width: $breakpoint-tablet) {
+    background-image: none;
+  }
 }

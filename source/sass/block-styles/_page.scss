@@ -1,16 +1,36 @@
-.page__page-container {
-  width: 1200px;
-  margin: 0 auto;
-  outline: 2px dashed red;
+.page {
+  // background-image: url("../img/bg-desktop-192-860-.jpg");
+  background-image: url("../img/bg-desktop-192-860-.jpg"),
+    linear-gradient(to right, $secondary-color 30%, transparent 30%, transparent 70%, $secondary-color 70%),
+    linear-gradient(to bottom, $secondary-color 100px, $light-darken 100px, $light-darken 700px, $secondary-color 700px);
+  background-repeat: no-repeat;
+  background-position: 50% 100px, 50% 50%;
 
   @media (max-width: $breakpoint-tablet) {
-    background-color: plum;
+    background-image: url("../img/bg-tablet-768-344.jpg"),
+      linear-gradient(to right, $secondary-color 30%, transparent 30%, transparent 70%, $secondary-color 70%),
+      linear-gradient(to bottom, $secondary-color 50px, $light-darken 50px, $light-darken 300px, $secondary-color 300px);
+    background-position: 50% 50px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background-image: url("../img/bg-mobile-320-235.jpg"),
+      linear-gradient(to right, $secondary-color 30%, transparent 30%, transparent 70%, $secondary-color 70%),
+      linear-gradient(to bottom, $secondary-color 50px, $light-darken 50px, $light-darken 180px, $secondary-color 180px);
+  }
+}
+
+.page__page-container {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-tablet) {
     max-width: $tablet-viewport;
   }
 
   @media (max-width: $breakpoint-mobile) {
-    background-color: aquamarine;
     max-width: $mobile-viewport;
-    min-width: $min-mobile-viewport;
+    min-width: mobile-viewport;
   }
 }

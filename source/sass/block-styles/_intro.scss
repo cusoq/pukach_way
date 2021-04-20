@@ -1,42 +1,68 @@
 .intro {
   box-sizing: border-box;
   color: $secondary-color;
-  width: 50%;
+  width: 40%;
   min-height: 860px;
+  padding: 190px 10px 0 0;
   margin: 0 0 0 auto;
-  background-color: $darken;
 
   @media (max-width: $breakpoint-tablet) {
+    padding: 60px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    min-height: 345px;
     margin: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 80px 10px 0 10px;
   }
 }
 
 .intro__caption {
-  margin: 0;
+  margin: 0 0 25px 0;
   font-size: $font-size-enormous;
   font-weight: $font-weight-semi-bold;
+  line-height: 80px;
+  letter-spacing: -1.11px;
 
   @media (max-width: $breakpoint-tablet) {
     font-size: $font-size-huge;
     text-align: center;
+    line-height: 45px;
+    letter-spacing: inherit;
+    margin: 0;
   }
 
   @media (max-width: $breakpoint-mobile) {
     font-size: $font-size-large;
+    line-height: 36px;
+    margin: 0 0 85px 0;
   }
 }
 
 .intro__lead {
   width: 360px;
+  margin: 15px 0 35px 0;
   font-size: $font-size-base;
   font-weight: $font-weight-regular;
+  line-height: 27px;
+  letter-spacing: -0.47px;
 
   @media (max-width: $breakpoint-tablet) {
+    margin: 15px 0 10px 0;
+    width: 400px;
     text-align: center;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    color: $deep-darken;
+    box-sizing: border-box;
+    width: 320px;
+    padding: 0 15px 0 15px;
+    margin: 15px 0 20px 0;
   }
 }
 
@@ -46,12 +72,13 @@
   text-align: left;
   background-image: url("../img/arrow-right.svg");
   background-repeat: no-repeat;
-  background-position: 90% 50%;
+  background-position: 87% 50%;
 
   @media (max-width: $breakpoint-tablet) {
     @include primary-link-mixin($font-size-micro, 50px, 250px);
     padding: 0 0 0 40px;
     text-align: left;
+    background-position: 85% 50%;
   }
 
   @media (max-width: $breakpoint-mobile) {
