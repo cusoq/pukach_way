@@ -1,6 +1,9 @@
 "use strict";
 
-const ESC__KEYCODE = 27;
+const ESC_KEYCODE = 27;
+const ENTER_KEYCODE = 13;
+const menuToggleButton = document.querySelector(".header__menu-toggle-button");
+const popup = document.querySelector(".navigation__list");
 const feedbackOpenButtons = document.querySelectorAll(".buy-link");
 const messageOpenButton = document.querySelector(".main__buy-button");
 const modal = document.querySelector(".main__buy");
@@ -14,6 +17,46 @@ const emailInput = modal.querySelector(".main__buy-field--email");
 const storage = "";
 const isStorageSupport = true;
 
+// открытие-закрытие модального окна
+const togglePopup = function () {
+  popup.classList.toggle("navigation__list--hidden");
+};
+
+// переключение вида кнопки открытия-закрытия меню
+const toggleOpenCloseButton = function () {
+  menuToggleButton.classList.toggle("header__menu-toggle-button--burger");
+  menuToggleButton.classList.toggle("header__menu-toggle-button--cross");
+};
+
+const toggleMenu = function () {
+  togglePopup();
+  toggleOpenCloseButton();
+};
+
+// Хендлеры
+
+const onClickToggler = function (evt) {
+  evt.preventDefault();
+  toggleMenu();
+};
+
+const onEnterOpener = function (evt) {
+  if (evt.keyCode === ENTER_KEYCODE) {
+    evt.preventDefault();
+    window.removeEventListener("keydown", onEnterOpener);
+    toggleMenu();
+  }
+};
+
+const onEscCloser = function (evt) {
+  if (evt.keyCode === ESC_KEYCODE) {
+    evt.preventDefault();
+    window.removeEventListener("keydown", onEscCloser);
+    popup.classList.add("navigation__list--hidden");
+    menuToggleButton.classList.remove("header__menu-toggle-button--cross");
+    menuToggleButton.classList.add("header__menu-toggle-button--burger");
+  }
+}
 
 // установка фокуса по умолчанию в наиболее подходящее поле
 const getFocus = function() {
@@ -96,7 +139,6 @@ const onSubmit = function(evt) {
   window.location.replace("index.html");
 }
 
-// Обработчики событий
 
 // обрабатываем событие отправки формы
 feedbackForm.addEventListener("submit", onSubmit);
@@ -108,5 +150,9 @@ feedbackOpenButtons.forEach(element => element.addEventListener("keydown", onCli
 // обрабатываем закрытие диалогового окна по клику на cross
 cross.addEventListener("click", onClickCloser);
 crossSuccess.addEventListener("click", onClickSuccessCloser);
-// обрабатываем закрытие диалогового окна по Esc
-document.addEventListener("keydown", onEscapeCloser);
+
+// Обработчики событий
+
+menuToggleButton.addEventListener("keydown", onEnterOpener);
+menuToggleButton.addEventListener("click", onClickToggler);
+document.addEventListener("keydown", onEscCloser);
