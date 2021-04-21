@@ -4,7 +4,6 @@ const ESC_KEYCODE = 27;
 const ENTER_KEYCODE = 13;
 const menuToggleButton = document.querySelector(".header__menu-toggle-button");
 const popup = document.querySelector(".navigation__list");
-console.log(popup);
 
 // открытие-закрытие модального окна
 const togglePopup = function () {

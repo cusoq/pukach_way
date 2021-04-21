@@ -10,15 +10,16 @@
     position: absolute;
     top: 50px;
     right: 0;
-    // display: none;
+    flex-direction: column;
+    justify-content: end;
     box-sizing: border-box;
-    width: 320px;
+    width: 100%;
     min-height: 518px;
     padding: 80px 0;
     font-size: $font-size-big;
     font-weight: $font-weight-semi-bold;
     color: $light-darken;
-    background-color: transparent;
+    background-color: $secondary-color;
   }
 
   &:hover,
