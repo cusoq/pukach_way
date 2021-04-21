@@ -7,6 +7,10 @@
   background-repeat: no-repeat;
   background-position: 0 50%;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-feedback-844-455-2x.jpg");
+  }
+
   @media (max-width: $breakpoint-tablet) {
     flex-direction: row-reverse;
     justify-content: center;

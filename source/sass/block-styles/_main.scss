@@ -1,6 +1,6 @@
 .main {
   color: $darken;
-  background-image: url("../img/map-bg.png");
+  background-image: url("../img/map-bg.svg");
   background-repeat: no-repeat;
   background-position: 50% 72%;
 
@@ -68,6 +68,10 @@
   background-position: content;
   background-color: $secondary-color;
   animation: bounce 0.6s;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/buy-bg-338-444-2x.jpg");
+  }
 
   @media (max-width: $breakpoint-mobile) {
     width: auto;
