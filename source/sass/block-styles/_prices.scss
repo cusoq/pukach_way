@@ -24,8 +24,10 @@
   }
 }
 
-.prices__tariff--complex {
+.prices__offer:hover .prices__tariff,
+.prices__offer:focus .prices__tariff {
   color: $accent-basic;
+  transition: 0.4s;
 }
 
 .prices__offer {
@@ -34,38 +36,21 @@
   flex-direction: column;
   width: 370px;
   min-height: 672px;
+  padding: 25px 30px 30px 30px;
+  border-radius: 6px;
+  border: 3px solid $ultra-light;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $accent-basic;
+    transition: 0.4s;
+  }
 
   @media (max-width: $breakpoint-tablet) {
     width: 288px;
     min-height: 635px;
-  }
-}
-
-.prices__offer--complex {
-  padding: 25px 30px 30px 30px;
-  border: 3px solid $accent-basic;
-  border-radius: 6px;
-
-  @media (max-width: $breakpoint-tablet) {
     padding: 15px 0 0 0;
     margin: 0 0 0 40px;
-    line-height: 38px;
-    border-radius: 6px 6px 0 0;
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    margin: 0 auto 32px auto;
-  }
-}
-
-.prices__offer--econom {
-  padding: 25px 30px 30px 30px;
-  border: 3px solid $ultra-light;
-  border-radius: 6px;
-
-  @media (max-width: $breakpoint-tablet) {
-    padding: 15px 0 0 0;
-    margin: 0 40px 0 0;
     line-height: 38px;
     border-radius: 6px 6px 0 0;
   }
@@ -122,25 +107,7 @@
   }
 }
 
-.prices__offer-list--complex::after {
-  position: absolute;
-  top: -25px;
-  left: 0;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: $accent-basic;
-  opacity: 0.5;
-
-  @media (max-width: $breakpoint-tablet) {
-    width: 248px;
-    top: -15px;
-    left: 15px;
-  }
-}
-
-.prices__offer-list--econom::after {
+.prices__offer-list::after {
   position: absolute;
   top: -25px;
   left: 0;
@@ -158,6 +125,12 @@
   }
 }
 
+.prices__offer:hover .prices__offer-list::after,
+.prices__offer:focus .prices__offer-list::after {
+  background-color: $accent-basic;
+  transition: 0.4s;
+}
+
 .prices__offer-item {
   position: relative;
   line-height: 32px;
@@ -171,20 +144,15 @@
     display: block;
     width: 14px;
     height: 14px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23FE7865'/%3e%3c/svg%3e ");
     background-repeat: no-repeat;
   }
 }
 
-.prices__offer-item--complex {
-  &::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23141517'/%3e%3c/svg%3e ");
-  }
-}
-
-.prices__offer-item--econom {
-  &::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23FE7865'/%3e%3c/svg%3e ");
-  }
+.prices__offer:hover .prices__offer-item::before,
+.prices__offer:focus .prices__offer-item::before {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.6138 0.210585C14.0498 0.549578 14.1285 1.17784 13.7895 1.61385L6.01453 11.6138C5.84138 11.8365 5.58223 11.9758 5.30094 11.9972C5.01966 12.0186 4.74242 11.9202 4.53757 11.7262L0.312502 7.72623C-0.0885582 7.34653 -0.105878 6.71361 0.273818 6.31255C0.653514 5.91149 1.28644 5.89417 1.6875 6.27386L5.11216 9.51608L12.2105 0.386246C12.5495 -0.0497617 13.1778 -0.128408 13.6138 0.210585Z' fill='%23141517'/%3e%3c/svg%3e ");
+  transition: 0.4s;
 }
 
 .prices__call-us-text {

@@ -10,7 +10,7 @@
     position: absolute;
     top: 50px;
     right: 0;
-    display: none;
+    // display: none;
     box-sizing: border-box;
     width: 320px;
     min-height: 518px;
@@ -25,6 +25,12 @@
   &:focus {
     color: $accent-hover;
     transition: 0.4s;
+  }
+}
+
+.navigation__list--hidden {
+  @media (max-width: $breakpoint-tablet) {
+    display: none;
   }
 }
 

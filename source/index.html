@@ -18,7 +18,7 @@
     <header class="page__header header">
       <img class="header__logo-pic" src="img/logo.svg" width="57" height="22" alt="Логотип">
       <nav class="header__navigation navigation">
-        <ul class="navigation__list">
+        <ul class="navigation__list navigation__list--hidden">
           <li><a class="navigation__link" href="#places">О путешествии</a></li>
           <li><a class="navigation__link" href="#prices">Цены</a></li>
         </ul>
@@ -269,7 +269,7 @@
 
       <section class="main__prices prices" id="prices">
         <h2 class="visually-hidden">Цены</h2>
-        <div class="prices__offer prices__offer--complex">
+        <div class="prices__offer" tabindex="0">
           <h2 class="visually-hidden">Комплексный тариф</h2>
           <p class="prices__tariff prices__tariff--complex">
             <b class="prices__tariff-name">Комплексный</b>
@@ -277,15 +277,15 @@
           </p>
           <p class="prices__offer-description">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
           <ul class="prices__offer-list  prices__offer-list--complex">
-            <li class="prices__offer-item prices__offer-item--complex">Разработанный маршрут с гидом группы</li>
-            <li class="prices__offer-item prices__offer-item--complex">Перелет, трансфер и проживание в отелях</li>
-            <li class="prices__offer-item prices__offer-item--complex">Завтраки, ужины в отелях и ланчи на природе</li>
-            <li class="prices__offer-item prices__offer-item--complex">Экскурсии по удивительно красивым местам Европы
+            <li class="prices__offer-item">Разработанный маршрут с гидом группы</li>
+            <li class="prices__offer-item">Перелет, трансфер и проживание в отелях</li>
+            <li class="prices__offer-item">Завтраки, ужины в отелях и ланчи на природе</li>
+            <li class="prices__offer-item">Экскурсии по удивительно красивым местам Европы
             </li>
           </ul>
           <a class="prices__buy-link" href="#">купить тур сейчас</a>
         </div>
-        <div class="prices__offer prices__offer--econom">
+        <div class="prices__offer" tabindex="0">
           <h2 class="visually-hidden">Экономныйный тариф</h2>
           <p class="prices__tariff prices__tariff--econom">
             <b class="prices__tariff-name">Экономный</b>
@@ -293,11 +293,11 @@
           </p>
           <p class="prices__offer-description">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
           <ul class="prices__offer-list prices__offer-list--econom">
-            <li class="prices__offer-item prices__offer-item--econom">Разработанный маршрут с гидом группы</li>
-            <li class="prices__offer-item prices__offer-item--econom">Перелет и трансфер</li>
-            <li class="prices__offer-item prices__offer-item--econom">Проживание в хостелах при отелях</li>
-            <li class="prices__offer-item prices__offer-item--econom">Только завтраки в отелях</li>
-            <li class="prices__offer-item prices__offer-item--econom">Экскурсии по удивительно красивым местам Европы
+            <li class="prices__offer-item">Разработанный маршрут с гидом группы</li>
+            <li class="prices__offer-item">Перелет и трансфер</li>
+            <li class="prices__offer-item">Проживание в хостелах при отелях</li>
+            <li class="prices__offer-item">Только завтраки в отелях</li>
+            <li class="prices__offer-item">Экскурсии по удивительно красивым местам Европы
             </li>
           </ul>
           <a class="prices__buy-link" href="#">купить тур сейчас</a>
@@ -384,6 +384,7 @@
       </section>
     </footer>
   </div>
+  <script src="js/popup-script.js"></script>
 </body>
 
 </html>

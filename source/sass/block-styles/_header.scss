@@ -75,14 +75,10 @@
 .header__menu-toggle-button--cross {
   width: 50px;
   min-height: 50px;
-  background-color: $secondary-color;
+  // background-color: $secondary-color;
   background-image: url("../img/cross.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-
-  // @media (max-width: $breakpoint-tabl) {
-  //   width: 50px;
-  // }
 
   &:hover,
   &:focus {
