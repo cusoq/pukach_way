@@ -17,6 +17,10 @@ const emailInput = modal.querySelector(".main__buy-field--email");
 const storage = "";
 const isStorageSupport = true;
 
+const tabButtons = document.querySelectorAll(".detals__tab-button");
+const tabBlocks = document.querySelectorAll(".detals__tab-block");
+
+
 // открытие-закрытие модального окна
 const togglePopup = function () {
   popup.classList.toggle("navigation__list--hidden");
@@ -106,6 +110,21 @@ const checkValues = function() {
   };
 };
 
+// Переключение табов
+
+const switchTabs = (evt) => {
+  tabButtons.forEach(element => element.classList.remove("detals__tab-button--active"));
+  if (evt.target) { evt.target.classList.add("detals__tab-button--active"); };
+
+  tabBlocks.forEach(element => {
+    if (element.dataset.country === evt.target.dataset.country) {
+      element.classList.remove("visually-hidden");
+    } else {
+      element.classList.add("visually-hidden");
+    }
+  });
+}
+
 // Хендлеры
 const onClickOpener = function(evt) {
   evt.preventDefault();
@@ -139,6 +158,10 @@ const onSubmit = function(evt) {
   window.location.replace("index.html");
 }
 
+const onClickTabShower = function(evt) {
+  evt.preventDefault();
+  switchTabs(evt);
+};
 
 // обрабатываем событие отправки формы
 feedbackForm.addEventListener("submit", onSubmit);
@@ -150,9 +173,10 @@ feedbackOpenButtons.forEach(element => element.addEventListener("keydown", onCli
 // обрабатываем закрытие диалогового окна по клику на cross
 cross.addEventListener("click", onClickCloser);
 crossSuccess.addEventListener("click", onClickSuccessCloser);
-
-// Обработчики событий
-
+//
 menuToggleButton.addEventListener("keydown", onEnterOpener);
 menuToggleButton.addEventListener("click", onClickToggler);
 document.addEventListener("keydown", onEscCloser);
+/////////////////////////////////
+tabButtons.forEach(element => element.addEventListener("click", onClickTabShower));
+
